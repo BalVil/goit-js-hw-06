@@ -2,7 +2,7 @@ const inputEl = document.querySelector("#validation-input");
 
 const valueLength = Number(inputEl.dataset.length);
 
-const changeColor = function (event) {
+const onChangeColor = function (event) {
   const currentValueLength = event.currentTarget.value.length;
   if (currentValueLength !== valueLength) {
     inputEl.classList.remove("valid");
@@ -13,4 +13,4 @@ const changeColor = function (event) {
   }
 };
 
-const colorChangeByBlur = inputEl.addEventListener("blur", changeColor);
+inputEl.addEventListener("blur", onChangeColor);

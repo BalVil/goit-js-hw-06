@@ -14,6 +14,7 @@ const makeListItems = (items) => {
     const liElement = document.createElement("li");
     liElement.textContent = element;
     liElement.classList.add(".item");
+
     return liElement;
   });
 };
