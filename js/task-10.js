@@ -18,9 +18,9 @@ function destroyBoxes() {
   inputEl.value = "";
 }
 
-function createBoxes(amount) {
-  let divElSize = 30;
+let divElSize = 30;
 
+function createBoxes(amount) {
   for (let i = 0; i < amount; i += 1) {
     const randomColor = getRandomHexColor();
 
@@ -28,7 +28,7 @@ function createBoxes(amount) {
     divEl.style.width = `${divElSize}px`;
     divEl.style.height = `${divElSize}px`;
     divEl.style.backgroundColor = randomColor;
-    boxesEl.append(divEl);
     divElSize += 10;
+    boxesEl.append(divEl);
   }
 }
